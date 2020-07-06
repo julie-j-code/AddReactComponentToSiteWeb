@@ -29,9 +29,19 @@ $articles = App\Generator::getArticles();
                     <h2><?= $article['title'] ?></h2>
                     <p><?= $article['introduction'] ?></p>
                     <a href="article.php" class="btn btn-primary">Lire la suite</a>
+                    <span class="react-like"></span>
                 </div>
             <?php endforeach ?>
         </div>
     </div>
+
+     <!-- Charge React -->
+  <!-- Remarque : pour le déploiement, remplacer "development.js"
+       par "production.min.js" -->
+  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+  <script src="static/js/posts.js"></script>
+
+
 </body>
 </html>
