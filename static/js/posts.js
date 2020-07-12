@@ -6,17 +6,28 @@ console.log("kikou youtube");
 
 
 class LikeButton extends React.Component {
-    constructor(props) {
+
+    // une fois que j'ai intégré babel, je n'ai plus besoin de mon contructor ?!?
+    // LC explique que je peux utiliser la "fonctionnalité des classe property" qui n'existait pas dans le jS natif
+/*     constructor(props) {
         super(props);
         this.state = { 
             likes : this.props.likes || 0,
             isLiked : this.props.isLiked || false
-         };
+         }; */
 
          // this.handleClick : this.handleClick.bind(this);
-    }
 
-    handleClick(){
+         // state devient un objet
+         // mais je déteste...
+
+         state = {
+             likes: this.props.likes || 0,
+             isLiked :this.props.isLiked || false
+         };
+    
+
+    handleClick = () =>{
         const isLiked = this.state.isLiked;
         const likes = this.state.likes + (isLiked ? - 1 : 1);
         // this.setState({likes: likes})
@@ -42,11 +53,11 @@ render() {
     return(
         <button className="btn btn_link" onClick={()=> this.handleClick()}>
             {this.state.likes}
-            {" "}
+            &nbsp;
             <i className={
                     this.state.isLiked ?'fas fa-thumbs-up' : 'far fa-thumbs-up'
                 }/>
-            {" "}
+            &nbsp;
             {this.state.isLiked ? "je n'aime plus" : "j'aime" }
         </button>    
     
