@@ -12,9 +12,21 @@ class LikeButton extends React.Component {
             likes : this.props.likes || 0,
             isLiked : this.props.isLiked || false
          };
+
+         // this.handleClick : this.handleClick.bind(this);
     }
+
+    handleClick(){
+        const isLiked = this.state.isLiked;
+        const likes = this.state.likes + (isLiked ? - 1 : 1);
+        // this.setState({likes: likes})
+        // quand le nom de la propriété est le même que la valeur de la propriété, ES6 permet 
+        this.setState({likes, isLiked : !isLiked});
+    }
+
     render() { 
-        return React.createElement('button' , {className : 'btn btn-link'}, "j'aime" );
+        // on utilise une zero fonction
+        return React.createElement('button' , {className : 'btn btn-link', onClick : ()=> this.handleClick()},this.state.likes, "", this.state.isLiked ? "je n'aime plus" : "j'aime" );
     };
 }
  
