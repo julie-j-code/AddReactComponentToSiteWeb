@@ -20,6 +20,7 @@ $articles = App\Generator::getArticles();
     <title>Mon site en PHP etc etc.</title>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'/>
     <script src="https://kit.fontawesome.com/ff1b45b592.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
     <div class="container">
@@ -41,7 +42,8 @@ $articles = App\Generator::getArticles();
        par "production.min.js" -->
   <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
-  <script src="static/js/posts.js"></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js" ></script>
+  <script src="static/js/posts.js" type="text/babel"></script>
 
 
 </body>

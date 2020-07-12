@@ -24,7 +24,7 @@ class LikeButton extends React.Component {
         this.setState({likes, isLiked : !isLiked});
     }
 
-    render() { 
+/*     render() { 
         // on utilise une zero fonction
         return React.createElement('button' , {className : 'btn btn-link', onClick : ()=> this.handleClick()},
         this.state.likes, 
@@ -34,6 +34,26 @@ class LikeButton extends React.Component {
         this.state.isLiked ? "je n'aime plus" : "j'aime" );
 
     };
+} */
+
+
+render() { 
+    // on utilise une zero fonction
+    return(
+        <button className="btn btn_link" onClick={()=> this.handleClick()}>
+            {this.state.likes}
+            {" "}
+            <i className={
+                    this.state.isLiked ?'fas fa-thumbs-up' : 'far fa-thumbs-up'
+                }/>
+            {" "}
+            {this.state.isLiked ? "je n'aime plus" : "j'aime" }
+        </button>    
+    
+    );
+
+}
+
 }
  
 document.querySelectorAll('span.react-like').forEach(function(span){
