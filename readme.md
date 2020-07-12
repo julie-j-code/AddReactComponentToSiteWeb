@@ -1,7 +1,7 @@
 # Tutoriel vidéo : React In PHP !
 
 Dans ce tutoriel, on a vu comment ajouter React à un site existant et même ... vieillissant !
-Sans JSX dans un premier temps, en utilisant React.createElement()
+Sans JSX dans un premier temps, en utilisant React.createElement().
 Avec JSX par la suite
 
 # Installation
