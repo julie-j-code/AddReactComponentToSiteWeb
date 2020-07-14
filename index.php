@@ -31,7 +31,7 @@ $articles = App\Generator::getArticles();
                     <h2><?= $article['title'] ?></h2>
                     <p><?= $article['introduction'] ?></p>
                     <a href="article.php" class="btn btn-primary">Lire la suite</a>
-                    <span class="react-like"></span>
+                    <span class="react-like" data-likes="<?=$article['likes'] ?>" data-is-liked="<?=$article['isLiked']?>"></span>
                 </div>
             <?php endforeach ?>
         </div>
@@ -39,11 +39,15 @@ $articles = App\Generator::getArticles();
 
      <!-- Charge React -->
   <!-- Remarque : pour le déploiement, remplacer "development.js"
-       par "production.min.js" -->
+       par "production.min.js" 
+    Une fois que j'utilise webpack, qui est un bundler, je peux utiliser des modules, donc procéder par imports / exports, 
+    et ne suis plus tenue d'utiliser les scripts suivants
   <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
   <script src="https://unpkg.com/babel-standalone@6/babel.min.js" ></script>
-  <script src="static/js/posts.js" type="text/babel"></script>
+  -->
+  <script src="static/js/posts.js" ></script>
+  <script src="static/js/runtime.js" ></script>
 
 
 </body>

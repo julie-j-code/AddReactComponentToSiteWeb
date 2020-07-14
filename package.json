@@ -3,6 +3,16 @@
   "version": "1.0.0",
   "description": "Dans ce tutoriel, on a vu comment ajouter React à un site existant et même ... vieillissant !\r Sans JSX dans un premier temps, en utilisant React.createElement().\r Avec JSX par la suite",
   "main": "index.js",
+  "dependencies": {
+    "core-js": "^3.6.5",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "webpack-notifier": "^1.8.0"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.0.0",
+    "@symfony/webpack-encore": "^0.30.2"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "encore dev",
@@ -19,15 +29,5 @@
   "bugs": {
     "url": "https://github.com/julie-j-code/AddReactComponentToSiteWeb/issues"
   },
-  "homepage": "https://github.com/julie-j-code/AddReactComponentToSiteWeb#readme",
-  "devDependencies": {
-    "@babel/plugin-proposal-class-properties": "^7.10.4",
-    "@babel/preset-react": "^7.10.4",
-    "@symfony/webpack-encore": "^0.30.2",
-    "webpack-notifier": "^1.6.0"
-  },
-  "dependencies": {
-    "@babel/runtime-corejs3": "^7.10.4",
-    "core-js": "^3.6.5"
-  }
+  "homepage": "https://github.com/julie-j-code/AddReactComponentToSiteWeb#readme"
 }

@@ -1,9 +1,5 @@
-console.log("kikou youtube");
-
-// React
-//React DOM
-
-
+import React from 'react';
+import ReactDOM from 'react-dom';
 
 class LikeButton extends React.Component {
 
@@ -12,6 +8,7 @@ class LikeButton extends React.Component {
 /*     constructor(props) {
         super(props);
         this.state = { 
+        
             likes : this.props.likes || 0,
             isLiked : this.props.isLiked || false
          }; */
@@ -51,7 +48,8 @@ class LikeButton extends React.Component {
 render() { 
     // on utilise une zero fonction
     return(
-        <button className="btn btn_link" onClick={()=> this.handleClick()}>
+        
+        <button className="btn btn-link" onClick={()=> this.handleClick()}>
             {this.state.likes}
             &nbsp;
             <i className={
@@ -65,8 +63,12 @@ render() {
 
 }
 
-}
+};
  
 document.querySelectorAll('span.react-like').forEach(function(span){
-    ReactDOM.render(React.createElement(LikeButton), span);
+    // Plus desoin de passer par React.createElement 
+    // ReactDOM.render(React.createElement(LikeButton), span);
+    const likes = +span.dataset.likes;
+    const isLiked = +span.dataset.isLiked === 1;
+    ReactDOM.render(<LikeButton likes={likes} isLiked={isLiked}/>, span)
 });

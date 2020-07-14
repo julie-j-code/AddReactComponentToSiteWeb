@@ -1,5 +1,4 @@
 {
-  "static/js/posts.js": "/static/js/posts.js",
-  "static/js/runtime.js": "/static/js/runtime.js",
-  "static/js/vendors~posts.js": "/static/js/vendors~posts.js"
+  "static/posts.js": "/static/posts.js",
+  "static/runtime.js": "/static/runtime.js"
 }

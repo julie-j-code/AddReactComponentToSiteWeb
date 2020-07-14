@@ -2,9 +2,8 @@
   "entrypoints": {
     "posts": {
       "js": [
-        "/static/js/runtime.js",
-        "/static/js/vendors~posts.js",
-        "/static/js/posts.js"
+        "/static/runtime.js",
+        "/static/posts.js"
       ]
     }
   }
